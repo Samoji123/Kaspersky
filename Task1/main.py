@@ -7,7 +7,6 @@ with open('cotest.txt') as f:
 with open('slovar.txt') as f:
     dict = f.read().split('\n')
 
-
 text = stext.split('?')
 cord = [0]
 lastlen = 0
@@ -33,9 +32,7 @@ for sent in text:
         cord.append(lastlen + sent.rfind('!')+1)
     lastlen += len(sent)+1
 
-print(cord)
 pars = [stext[cord[i-1]: cord[i]] for i in range(1, len(cord))]
-print(pars)
 
 big_answer = ''
 keys = []
