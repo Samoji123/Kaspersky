@@ -58,4 +58,4 @@ for par in pars:
 with open('ans.txt', 'w') as f:
     f.write(big_answer)
 with open('keys.txt', 'w') as f:
-    f.write(''.join([str('Ключ' + str(i+1) + ': ' + str(e) + '; ') for i, e in enumerate(keys)]))
+    f.write(''.join([str('key' + str(i+1) + ': ' + str(e) + '; ') for i, e in enumerate(keys)]))
