@@ -38,6 +38,7 @@ pars = [stext[cord[i-1]: cord[i]] for i in range(1, len(cord))]
 print(pars)
 
 big_answer = ''
+keys = []
 
 for par in pars:
     for key in range(1, 27):
@@ -51,7 +52,10 @@ for par in pars:
         if counter >= 10:
             print(par, key, ans, sep = '\n')
             big_answer += ans + '\n'
+            keys.append(key)
             break
 
 with open('ans.txt', 'w') as f:
     f.write(big_answer)
+with open('keys.txt', 'w') as f:
+    f.write(''.join([str('Ключ' + str(i+1) + ': ' + str(e) + '; ') for i, e in enumerate(keys)]))
