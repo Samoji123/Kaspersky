@@ -24,3 +24,4 @@ for i in range(len(vars)):
     text.replace(vars[i], 'a'+str(i+1))
 
 print(text,vars,array, sep = '\n')
+
