@@ -1,8 +1,9 @@
-with open('prog.txt', encoding='utf-8') as f:
+a = input('Укажите путь к файлу: ')
+with open(a, 'rb') as f:
     text = f.read()
     text = text[:2]
     flag = False
-    if text == 'MZ':
+    if text == b'MZ':
         flag = True
 
 if flag:
