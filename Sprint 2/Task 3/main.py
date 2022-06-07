@@ -8,9 +8,9 @@ with open('program.txt', encoding = 'utf-8') as f:
         if '+=' in line or '==' in line or '-=' in line or '*=' in line or '/=' in line or '**=' in line:
             continue
         elif '=[' in line:
-            array.append(line[:line.find('=')].replace(' ', '')+' ')
+            array.append(line[:line.find('=')].lstrip())
         elif '=' in line:
-            vars.append(line[:line.find('=')].replace(' ', '')+' ')
+            vars.append(line[:line.find('=')].lstrip())
 
 with open('program.txt', encoding = 'utf-8') as f:
     text = f.read()
